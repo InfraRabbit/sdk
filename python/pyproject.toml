@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "infrarabbit"
+version = "0.1.0"
+description = "Python client for the InfraRabbit price API: cheapest VPS, GPU and LLM prices, with sources and dates."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["infrarabbit", "pricing", "vps", "gpu", "llm", "api-client"]
+classifiers = ["Programming Language :: Python :: 3", "Typing :: Typed"]
+dependencies = []
+
+[project.optional-dependencies]
+langchain = ["langchain-core>=0.2"]
+dev = ["pytest", "build"]
+
+[project.urls]
+Homepage = "https://infrarabbit.com"
+API = "https://infrarabbit.com/api"
+
+[tool.setuptools.package-data]
+infrarabbit = ["py.typed"]
+
+[tool.pytest.ini_options]
+markers = ["live: calls the real API (run with INFRARABBIT_LIVE=1)"]

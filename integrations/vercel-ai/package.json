@@ -1,0 +1,7 @@
+{
+  "name": "infrarabbit-vercel-ai-example",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test test.mjs" },
+  "dependencies": { "ai": "^5.0.0", "zod": "^3.25.0", "infrarabbit": "file:../../js" }
+}

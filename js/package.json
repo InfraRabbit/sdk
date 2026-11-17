@@ -1,0 +1,25 @@
+{
+  "name": "infrarabbit",
+  "version": "0.1.0",
+  "description": "Client for the InfraRabbit price API: cheapest VPS, GPU and LLM prices, with sources and dates.",
+  "license": "MIT",
+  "homepage": "https://infrarabbit.com",
+  "keywords": ["infrarabbit", "pricing", "vps", "gpu", "llm", "api-client"],
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/esm/index.d.ts", "default": "./dist/esm/index.js" },
+      "require": { "types": "./dist/cjs/index.d.ts", "default": "./dist/cjs/index.js" }
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "test": "npm run build && node --test test/client.test.mjs"
+  },
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.6.0" }
+}
