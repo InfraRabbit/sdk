@@ -21,6 +21,8 @@ dev = ["pytest", "build"]
 [project.urls]
 Homepage = "https://infrarabbit.com"
 API = "https://infrarabbit.com/api"
+Repository = "https://github.com/InfraRabbit/sdk"
+"Bug Tracker" = "https://github.com/InfraRabbit/sdk/issues"
 
 [tool.setuptools.package-data]
 infrarabbit = ["py.typed"]

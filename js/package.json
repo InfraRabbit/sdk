@@ -4,6 +4,8 @@
   "description": "Client for the InfraRabbit price API: cheapest VPS, GPU and LLM prices, with sources and dates.",
   "license": "MIT",
   "homepage": "https://infrarabbit.com",
+  "repository": { "type": "git", "url": "git+https://github.com/InfraRabbit/sdk.git", "directory": "js" },
+  "bugs": { "url": "https://github.com/InfraRabbit/sdk/issues" },
   "keywords": ["infrarabbit", "pricing", "vps", "gpu", "llm", "api-client"],
   "type": "module",
   "main": "./dist/cjs/index.js",
